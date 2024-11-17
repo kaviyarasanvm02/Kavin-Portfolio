@@ -41,8 +41,14 @@
     border-radius: 0.5rem;
     /* background: rgb(50,50,50); */
     background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease;
 }
-
+.educationBar:hover {
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); 
+    background: #f0f0f0; 
+    transform: translateY(-3px); 
+}
 .educationBarImg{
     object-fit: cover;
     height: 3rem;

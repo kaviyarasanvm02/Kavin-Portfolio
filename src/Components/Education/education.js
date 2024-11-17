@@ -4,7 +4,7 @@ import NSMVPS from '../../Assets/NSMVPS.png';
 import Alagappa from '../../Assets/Alagappa_Logo.png';
 import Jspiders from '../../Assets/jspiders_logo.jpeg';
 
-const education = () => {
+const Education = () => {
   return (
     <section id='education'>
         <span className="educationTitle">Education</span>
@@ -43,4 +43,4 @@ const education = () => {
   )
 }
 
-export default education;
+export default Education;
