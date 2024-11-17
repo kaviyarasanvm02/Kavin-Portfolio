@@ -6,11 +6,22 @@ import instagramIcon from "../../Assets/instagram.png";
 import youtubeIcon from "../../Assets/youtube.png";
 import emailjs from "@emailjs/browser";
 const Contact = () => {
+
   const form = useRef();
+
 
   const sendEmail = (e) => {
     e.preventDefault();
 
+  const formData = new FormData(form.current);
+  const name = formData.get("from_name").trim();
+  const email = formData.get("from_email").trim();
+  const message = formData.get("message").trim();
+
+    if(!name || !email || !message){
+      alert("Please fill out all fields before submitting the form.");
+      return;
+    }
     emailjs
       .sendForm("service_co3d29b", "template_bnjw0xm", form.current, {
         publicKey: "eI8mGbYvQvsrTkSgg",
@@ -18,7 +29,7 @@ const Contact = () => {
       .then(
         () => {
           console.log("SUCCESS!");
-          e.target.reset();
+         form.current.reset();
           alert("Your message has been sent successfully! Thank you for reaching out.")
         },
         (error) => {
