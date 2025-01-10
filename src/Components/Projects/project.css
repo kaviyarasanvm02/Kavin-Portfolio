@@ -1,4 +1,4 @@
-#works{
+#works {
     margin: 0 auto;
     min-height: calc(100vh - 4rem);
     width: 100vw;
@@ -11,43 +11,64 @@
     padding: 0 1rem;
 }
 
-.workTitle{
+.workTitle {
     margin: 1rem 0;
     font-size: 3rem;
 }
 
-.workDesc{
+.workDesc {
     margin: 1rem;
     font-weight: 300;
     font-size: 1rem;
     max-width: 45rem;
 }
-.worksImgs{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100vw;
-    max-width: 65rem;
-}
-.workImg{
-    /* object-fit: cover; */
-    height: 20rem;
-    margin: 0.5rem;
+
+.worksImgs {
+    margin-top: 2rem;
+    width: 100%;
 }
 
-.workBtn{
+.workImg {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+/* React Slick arrow customizations */
+.slick-prev,
+.slick-next {
+    z-index: 1;
+    color: black;
+    font-size: 2rem;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    color: gray;
+}
+
+/* React Slick dot customizations */
+.slick-dots li button:before {
+    font-size: 1rem;
+    color: black;
+}
+
+.slick-dots li.slick-active button:before {
+    color: gray;
+}
+
+.workBtn {
     margin: 3rem 0;
     padding: 0.5rem 2.5rem;
     border: none;
     border-radius: 2rem;
     background: white;
     font-size: 1rem;
+    cursor: pointer;
 }
 
-@media screen and (max-width:585px) {
-    .workImg{
-        height: 50vw;
+@media screen and (max-width: 585px) {
+    .workImg {
+        height: auto;
     }
-    
 }
